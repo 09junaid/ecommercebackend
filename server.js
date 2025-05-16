@@ -38,5 +38,5 @@ app.get("/", (req, res) => {
     error: false,
   });
 });
-
+connectDB();
 export default app;
