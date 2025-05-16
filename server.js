@@ -17,7 +17,7 @@ const app = express();
 
 // @ middleware
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: ["http://localhost:5173","https://hypehive.vercel.app"],
   credentials: true,
 }));
 app.use(bodyParser.json());
