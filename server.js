@@ -13,7 +13,7 @@ import bodyParser from "body-parser";
 // import serverless from "serverless-http"; // 🔥 New
 
 dotenv.config();
-export const app = express();
+const app = express();
 
 // @ middleware
 app.use(cors({
@@ -37,3 +37,5 @@ app.get("/", (req, res) => {
     error: false,
   });
 });
+
+export default app;
