@@ -13,7 +13,7 @@ import bodyParser from "body-parser";
 // import serverless from "serverless-http"; // 🔥 New
 
 dotenv.config();
-const app = express();
+export const app = express();
 
 // @ middleware
 app.use(cors({
@@ -37,17 +37,3 @@ app.get("/", (req, res) => {
     error: false,
   });
 });
-
-const start=async()=>{
-  try {
-    await connectDB();
-    app.listen(process.env.PORT, () => {
-      console.log(
-        `Server is running on port ${process.env.PORT}`.bgCyan.white
-      );
-    });
-  } catch (error) {
-    console.log(error);
-  }
-}
-start();
