@@ -33,6 +33,7 @@ app.use("/api/v1/contact", contactRoute);
 
 app.get("/", (req, res) => {
   res.send({
+    message:"Welcome to HypeHive",
     activeStatus: true,
     error: false,
   });
